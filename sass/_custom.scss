@@ -1,0 +1,82 @@
+*{
+    color: $font-primary !important;
+}
+body{
+    //$t-300
+    background: $body-bg;
+}
+main{
+    .container{
+        min-height: 100vh;
+    }
+    //Title box of site
+    .title-box{
+        margin-bottom: 6rem;
+    }
+    .quiz-box{
+
+        //Question paragraph
+        .question{
+            margin-bottom: 2rem;
+            span{
+                display: block;
+            }
+            //1,2,3,4 etc.
+            .question-no{
+                padding-right: 1.5rem;
+                font-size: 4rem;
+            }
+            //Text of question
+            .question-text{
+                font-size: 1.4rem;
+                text-align: justify;
+            }
+        }
+
+        //Answers styles
+        .answers-list{
+            button{
+                display: block;
+                width: 100%;
+                text-align: left;
+                transition: .5s all;
+                cursor: pointer;
+                margin: .5rem 0;
+                background: $t-300;
+                font-size: 1.5rem;
+                padding: 0;
+                border: 0;
+                span{
+                    display: inline-block;
+                }
+                &:hover{
+                    background: $t-400;
+                }
+                &:active{
+                    box-shadow: 0 0 5px $t-600;
+                }
+                &:focus{
+                    box-shadow: 0 0 5px $t-600;
+                }
+                //Answer
+                &.answer{
+                    //A, B, C... etc
+                    .answer-letter{
+                        font-size: 1.7rem;
+                        padding: .6rem;
+                        width: 40px;
+                        text-align: center;
+                        background-color: $t-500;
+                    }
+                    //Answer text
+                    .answer-text{
+                        padding: 1rem 0;
+                        font-size: 1.4rem;
+                        padding: .6rem;
+                        width: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

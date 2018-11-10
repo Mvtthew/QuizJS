@@ -13,20 +13,30 @@
 </head>
 <body>
     <main id="app">
-        <div class="container d-flex flex-column align-items-center justify-content-center quiz-box">
+        <div class="container d-flex flex-column align-items-center justify-content-center">
             <div class="w-100 text-center title-box">
                 <h1>QuizJS by Matthew</h1>
-                <p>QuizJS is simple JS library to create nice Quizes.</p>
+                <p>QuizJS is simple JS library to create Quizes.</p>
             </div>
-            <div class="w-100">
-                <h1>Nazwa pytania</h1>
-                <p class="question">Nam finibus augue leo, vitae suscipit nisl laoreet ut. Integer interdum ultrices neque, nec pharetra neque ultrices in?</p>
-                <ul class="answers-list">
-                    <li><span class="answer-letter">A</span> Odpowiedzi</li>
-                    <li><span class="answer-letter">B</span> Odpowiedzi</li>
-                    <li><span class="answer-letter">C</span> Odpowiedzi</li>
-                    <li><span class="answer-letter">D</span> Odpowiedzi</li>
-                </ul>
+            <div class="w-100 quiz-box">
+                <div class="question d-flex align-items-center">
+                    <span class="question-no">2.</span>
+                    <span class="question-text">Nam finibus augue leo, vitae suscipit nisl laoreet ut. Integer interdum ultrices neque, nec pharetra neque ultrices in?</span>
+                </div>
+                <div class="answers-list">
+                    <button class="answer">
+                        <span class="answer-letter">A</span><span class="answer-text">Laoreet</span>
+                    </button>
+                    <button class="answer">
+                        <span class="answer-letter">B</span><span class="answer-text">Integer</span>
+                    </button>
+                    <button class="answer">
+                        <span class="answer-letter">C</span><span class="answer-text">Suscipit</span>
+                    </button>
+                    <button class="answer">
+                        <span class="answer-letter">D</span><span class="answer-text">Vitae</span>
+                    </button>
+                </div>
             </div>
         </div>
     </main>
