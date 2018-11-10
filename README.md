@@ -1,13 +1,17 @@
 # QuizJS v0.12a
 > Made by Mateusz Ożóg
 
-Simple JS library to create smaller and bigger quizes!
+Simple JS library to create smaller and bigger quizes on your website!
+
+### Requirements for QuizJS
+- JQuery 3+
+- Bootstrap Bundle 4+
 
 ### How to initialize and use QuizJS!
 ```
 <!-- In HTML file -->
 
-<div class="w-100 quiz-box" id="quiz">
+<div class="quiz-box" id="quiz">
     <div class="question-block">
         <span class="question-no"></span>
         <span class="question-text"></span>
