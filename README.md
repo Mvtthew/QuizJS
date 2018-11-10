@@ -2,6 +2,7 @@
 > Made by Mateusz Ożóg
 
 Simple JS library to create smaller and bigger quizes on your website!
+
 *Not fully functional YET!*
 
 ### Requirements for QuizJS
