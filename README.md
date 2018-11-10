@@ -3,7 +3,7 @@
 
 Simple JS library to create smaller and bigger quizes on your website!
 
-*Not fully functional YET!*
+**Not fully functional YET!**
 
 ### Requirements for QuizJS
 - JQuery 3+
