@@ -12,21 +12,23 @@ main .container {
 main .title-box {
   margin-bottom: 6rem;
 }
-main .quiz-box .question {
+main .quiz-box .question-block {
+  display: flex !important;
+  align-items: center;
   margin-bottom: 2rem;
 }
-main .quiz-box .question span {
+main .quiz-box .question-block span {
   display: block;
 }
-main .quiz-box .question .question-no {
+main .quiz-box .question-block .question-no {
   padding-right: 1.5rem;
   font-size: 4rem;
 }
-main .quiz-box .question .question-text {
+main .quiz-box .question-block .question-text {
   font-size: 1.4rem;
   text-align: justify;
 }
-main .quiz-box .answers-list button {
+main .quiz-box .answers-block button {
   display: block;
   width: 100%;
   text-align: left;
@@ -38,26 +40,26 @@ main .quiz-box .answers-list button {
   padding: 0;
   border: 0;
 }
-main .quiz-box .answers-list button span {
+main .quiz-box .answers-block button span {
   display: inline-block;
 }
-main .quiz-box .answers-list button:hover {
+main .quiz-box .answers-block button:hover {
   background: #26A69A;
 }
-main .quiz-box .answers-list button:active {
+main .quiz-box .answers-block button:active {
   box-shadow: 0 0 5px #00897B;
 }
-main .quiz-box .answers-list button:focus {
+main .quiz-box .answers-block button:focus {
   box-shadow: 0 0 5px #00897B;
 }
-main .quiz-box .answers-list button.answer .answer-letter {
+main .quiz-box .answers-block button.answer .answer-letter {
   font-size: 1.7rem;
   padding: 0.6rem;
   width: 40px;
   text-align: center;
   background-color: #009688;
 }
-main .quiz-box .answers-list button.answer .answer-text {
+main .quiz-box .answers-block button.answer .answer-text {
   padding: 1rem 0;
   font-size: 1.4rem;
   padding: 0.6rem;

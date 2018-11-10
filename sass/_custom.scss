@@ -15,8 +15,10 @@ main{
     }
     .quiz-box{
 
-        //Question paragraph
-        .question{
+        //Question block
+        .question-block{
+            display: flex !important;
+            align-items: center;
             margin-bottom: 2rem;
             span{
                 display: block;
@@ -34,7 +36,7 @@ main{
         }
 
         //Answers styles
-        .answers-list{
+        .answers-block{
             button{
                 display: block;
                 width: 100%;

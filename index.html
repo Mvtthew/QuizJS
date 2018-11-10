@@ -5,7 +5,7 @@
     <title>QuizJS | Matthew</title>
     <!-- Bootstrap / Animate.css / Custom styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/animatec.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <!-- JQ Library / Bootstrap -->
     <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
@@ -18,24 +18,16 @@
                 <h1>QuizJS by Matthew</h1>
                 <p>QuizJS is simple JS library to create Quizes.</p>
             </div>
-            <div class="w-100 quiz-box">
-                <div class="question d-flex align-items-center">
-                    <span class="question-no">2.</span>
-                    <span class="question-text">Nam finibus augue leo, vitae suscipit nisl laoreet ut. Integer interdum ultrices neque, nec pharetra neque ultrices in?</span>
+            <div class="w-100 quiz-box" id="quiz">
+                <div class="question-block">
+                    <span class="question-no"></span>
+                    <span class="question-text"></span>
                 </div>
-                <div class="answers-list">
-                    <button class="answer">
-                        <span class="answer-letter">A</span><span class="answer-text">Laoreet</span>
-                    </button>
-                    <button class="answer">
-                        <span class="answer-letter">B</span><span class="answer-text">Integer</span>
-                    </button>
-                    <button class="answer">
-                        <span class="answer-letter">C</span><span class="answer-text">Suscipit</span>
-                    </button>
-                    <button class="answer">
-                        <span class="answer-letter">D</span><span class="answer-text">Vitae</span>
-                    </button>
+                <div class="answers-block">
+                </div>
+                <div class="buttons-block text-right">
+                    <button class="previous-question btn">Previous</button>
+                    <button class="skip-question btn">Skip</button>
                 </div>
             </div>
         </div>
