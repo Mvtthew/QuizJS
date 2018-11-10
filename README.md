@@ -7,7 +7,7 @@ Simple JS library to create smaller and bigger quizes on your website!
 - JQuery 3+
 - Bootstrap Bundle 4+
 
-### How to initialize and use QuizJS!
+## How to initialize and use QuizJS!
 ```
 <!-- In HTML file -->
 
