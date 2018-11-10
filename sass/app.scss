@@ -1,0 +1,36 @@
+main{
+    .quiz-box{
+        min-height: 100vh;
+        // Title box of site
+        .title-box{
+            margin-bottom: 9rem;
+        }
+        // Question paragraph
+        .question{
+            font-size: 1.7rem;
+        }
+        // Answers styles
+        .answers-list{
+            list-style: none;
+            padding-inline-start: 0;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            li{
+                transition: .5s all;
+                cursor: pointer;
+                padding: .5rem;
+                margin: .25rem 0;
+                background: rgba(0, 0, 0, .1);
+                font-size: 1.3rem;
+                // Answers hover
+                &:hover{
+                    background: rgba(0, 0, 0, .3);
+                }
+                // A, B, C... etc
+                .answer-letter{
+
+                }
+            }
+        }
+    }
+}

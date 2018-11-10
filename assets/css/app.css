@@ -1,0 +1,28 @@
+main .quiz-box {
+  min-height: 100vh;
+}
+main .quiz-box .title-box {
+  margin-bottom: 9rem;
+}
+main .quiz-box .question {
+  font-size: 1.7rem;
+}
+main .quiz-box .answers-list {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+main .quiz-box .answers-list li {
+  transition: 0.5s all;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+  background: rgba(0, 0, 0, 0.1);
+  font-size: 1.3rem;
+}
+main .quiz-box .answers-list li:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/*# sourceMappingURL=app.css.map */
