@@ -14,7 +14,13 @@ main{
         margin-bottom: 6rem;
     }
     .quiz-box{
-
+        transition: .4s all;
+        *{
+            transition: .4s all;
+        }
+        &.hide{
+            opacity: 0;
+        }
         //Question block
         .question-block{
             display: flex !important;

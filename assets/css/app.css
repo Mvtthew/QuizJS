@@ -12,6 +12,15 @@ main .container {
 main .title-box {
   margin-bottom: 6rem;
 }
+main .quiz-box {
+  transition: 0.4s all;
+}
+main .quiz-box * {
+  transition: 0.4s all;
+}
+main .quiz-box.hide {
+  opacity: 0;
+}
 main .quiz-box .question-block {
   display: flex !important;
   align-items: center;
