@@ -27,7 +27,7 @@ $(function(){
             var randomizedIndexes = [];
             var randomizedAnswers = [];
             while(randomizedIndexes.length < this.questions[this.questionIndex].length - 1){
-                var randomnumber = Math.ceil(Math.random()*this.questions[this.questionIndex].length - 2) + 1;
+                var randomnumber = Math.ceil(Math.random()*(this.questions[this.questionIndex].length - 1));
                 if(randomizedIndexes.indexOf(randomnumber) > -1) continue;
                 randomizedIndexes[randomizedIndexes.length] = randomnumber;
             }
