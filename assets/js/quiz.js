@@ -6,11 +6,11 @@ $(function(){
             this.element = $('#'+elementID);
             this.questionBlock = this.element.children('.question-block');
             this.answerBlock = this.element.children('.answers-block');
-            this.buttons = this.element.children('.buttons-block');
             //Vars
             this.questions = questions;
             this.questionIndex = 0;
             this.answerLetters = ['', 'A', 'B', 'C', 'D', 'E', 'F', 'G'];
+            this.userAnswers = [];
             //Check for errors
             if(questions[0].constructor !== Array){
                 this.badQuestionsLog();
@@ -40,7 +40,8 @@ $(function(){
         changeQuestion(){
             //Check if we got more question to ask
             if(this.questionIndex == this.questions.length){
-                console.log('Quiz_over');
+                //End of quiz!
+                // TODO
             } else{
                 //Elements
                 var questionBlockNumber = $(this.questionBlock).children()[0];
@@ -62,20 +63,30 @@ $(function(){
         }
         //Answer buttons clicked
         makeChoice(element){
-            console.log(element);
             var answered = $(element).children('.answer-text').html();
             if(answered == this.questions[this.questionIndex-1][1]){
+                this.userAnswers[this.questionIndex-1] = true;
                 console.log('good');
             } else{
+                this.userAnswers[this.questionIndex-1] = false;
                 console.log('bad');
             }
-        }
-        //Skip question function
-        skipQuestion(){
             this.changeQuestion();
         }
+        hideQuiz(){
+            $(this.element).addClass('hide');
+        }
+        showQuiz(){
+            $(this.element).removeClass('hide');
+        }
+        //Skip question function
+        // skipQuestion(){
+        //     console.log(this.questionIndex);
+        //     this.changeQuestion();
+        // }
         //Previous question function
         previousQuestion(){
+            console.log(this.questionIndex);
             if(this.questionIndex > 1){
                 this.questionIndex -= 2;
                 this.changeQuestion();
@@ -87,6 +98,14 @@ $(function(){
             console.log("Error on 'questions' -> 2D array expected, got -> ["+questions+"]");
         }
     }
+    function initializeButtons(){
+        //Reset function
+        $('.answer').unbind();
+        //Add functions to buttons
+        $('.answer').click(function(){
+            quiz.makeChoice(this);
+        });
+    }
 
     var questions = [
         ['Question1', 'Answerto1q_valid_A', 'Answerto1q_B', 'Answerto1q_C', 'Answerto1q_D', 'Answerto1q_E'],
@@ -94,17 +113,5 @@ $(function(){
         ['Question3', 'Answerto3q_valid_A', 'Answerto3q_B', 'Answerto3q_C']
     ];
     var quiz = new quizJS(questions, "quiz");
-
-    function initializeButtons(){
-        $('.answer').click(function(){
-            quiz.makeChoice(this);
-        });
-        $('.skip-question').click(function(){
-            quiz.skipQuestion();
-        });
-        $('.previous-question').click(function(){
-            quiz.previousQuestion();
-        });
-    }
 
 });
