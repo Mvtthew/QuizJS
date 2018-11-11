@@ -11,7 +11,6 @@ Simple JS library to create smaller and bigger quizes on your website!
 
 ## How to initialize and use QuizJS!
 ```
-<!-- In HTML file -->
 <html>
     <head>
         <!-- Bootstrap -->
