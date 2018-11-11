@@ -16,7 +16,6 @@ Simple JS library to create smaller and bigger quizes on your website!
 <div class="quiz-box" id="quiz">
 </div>
 
-
 <script>
     //We need to made some questions and answers for our Quiz
     var questions = [
