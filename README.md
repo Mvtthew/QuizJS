@@ -1,4 +1,4 @@
-# QuizJS v0.12a
+# QuizJS v0.12c
 > Made by Mateusz Ożóg
 
 ## Not fully functional YET!
