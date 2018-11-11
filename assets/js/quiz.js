@@ -107,12 +107,4 @@ $(function(){
             quiz.makeChoice(this);
         });
     }
-
-    var questions = [
-        ['Question1', 'Answerto1q_valid_A', 'Answerto1q_B', 'Answerto1q_C', 'Answerto1q_D', 'Answerto1q_E'],
-        ['Question2', 'Answerto2q_valid_A', 'Answerto2q_B', 'Answerto2q_C'],
-        ['Question3', 'Answerto3q_valid_A', 'Answerto3q_B', 'Answerto3q_C']
-    ];
-    var quiz = new quizJS(questions, "quiz");
-
 });
