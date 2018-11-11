@@ -4,6 +4,7 @@ $(function(){
         constructor(questions, elementID) {
             //Elements
             this.element = $('#'+elementID);
+            $(this.element).html('<div class="question-block"><span class="question-no"></span><span class="question-text"></span></div><div class="answers-block"></div>');
             this.questionBlock = this.element.children('.question-block');
             this.answerBlock = this.element.children('.answers-block');
             //Vars

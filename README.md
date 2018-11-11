@@ -12,16 +12,6 @@ Simple JS library to create smaller and bigger quizes on your website!
 <!-- In HTML file -->
 
 <div class="quiz-box" id="quiz">
-    <div class="question-block">
-        <span class="question-no"></span>
-        <span class="question-text"></span>
-    </div>
-    <div class="answers-block">
-    </div>
-    <div class="buttons-block text-right">
-        <button class="previous-question btn">Previous</button>
-        <button class="skip-question btn">Skip</button>
-    </div>
 </div>
 
 
