@@ -1,7 +1,5 @@
-# QuizJS v0.12c
+# QuizJS v0.12c *(Not fully functional YET!)*
 > Made by Mateusz Ożóg
-
-## Not fully functional YET!
 
 Simple JS library to create smaller and bigger quizes on your website!
 
