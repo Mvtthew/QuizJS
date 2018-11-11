@@ -18,6 +18,7 @@ Simple JS library to create smaller and bigger quizes on your website!
     <head>
         <!-- Bootstrap -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/quizjs.css">
         <!-- JQ Library / Bootstrap -->
         <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
