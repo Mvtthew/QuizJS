@@ -3,9 +3,14 @@
 
 Simple JS library to create smaller and bigger quizes on your website!
 
-### Requirements for QuizJS
+## Requirements for QuizJS
 - JQuery 3+
 - Bootstrap Bundle 4+
+
+## What's working right now?
+- Initializing a new quiz
+- Adding up to 10 answers for one question
+- Randomizing order of answers every question
 
 ## How to initialize and use QuizJS!
 ```
@@ -29,9 +34,9 @@ Simple JS library to create smaller and bigger quizes on your website!
 
             //We need to made some questions and answers for our Quiz
             var questions = [
-                ['Question1', 'Answerto1q_valid_A', 'Answerto1q_B', 'Answerto1q_C'],
-                ['Question2', 'Answerto2q_valid_A', 'Answerto2q_B', 'Answerto2q_C'],
-                ['Question3', 'Answerto3q_valid_A', 'Answerto3q_B', 'Answerto3q_C']
+                ['Question1', 'Good answer', 'Bad answer', 'Bad answer'],
+                ['Question2', 'Good answer', 'Bad answer', 'Bad answer'],
+                ['Question3', 'Good answer', 'Bad answer', 'Bad answer']
             ];
 
             // If we got questions just create new quiz in JS
