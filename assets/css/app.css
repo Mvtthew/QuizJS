@@ -6,6 +6,10 @@ body {
   background: linear-gradient(#B2DFDB, #E0F2F1);
 }
 
+.transition-0 {
+  transition: 0s all !important;
+}
+
 main .container {
   min-height: 100vh;
 }

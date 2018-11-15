@@ -2,6 +2,8 @@ class quizJS {
     constructor(questions, elementID) {
         //Elements
         this.element = $('#'+elementID);
+        this.element_end = $('#'+elementID+"_end");
+        $(this.element_end).addClass('d-none');
         $(this.element).html('<div class="question-block"><span class="question-no"></span><span class="question-text"></span></div><div class="answers-block"></div>');
         this.questionBlock = this.element.children('.question-block');
         this.answerBlock = this.element.children('.answers-block');
@@ -10,6 +12,8 @@ class quizJS {
         this.questionIndex = 0;
         this.answerLetters = ['', 'A', 'B', 'C', 'D', 'E', 'F', 'G'];
         this.userAnswers = [];
+        this.points = 0;
+        this.max_points = this.questions.length;
         //Check for errors
         if(questions[0].constructor !== Array){
             this.badQuestionsLog();
@@ -18,6 +22,8 @@ class quizJS {
         this.firstInitialize();
     }
     firstInitialize(){
+        //Add animate.css important classes
+        $(this.element).addClass('animated faster');
         //Start quiz from index = 0
         this.changeQuestion();
     }
@@ -40,7 +46,7 @@ class quizJS {
         //Check if we got more question to ask
         if(this.questionIndex == this.questions.length){
             //End of quiz!
-            // TODO
+            qJSendQuiz(this.element, this.element_end, this.points, this.max_points);
         } else{
             //Elements
             var questionBlockNumber = $(this.questionBlock).children()[0];
@@ -56,19 +62,21 @@ class quizJS {
                 answerHTML += '<button class="answer"><span class="answer-letter">'+this.answerLetters[i]+'</span><span class="answer-text">'+randomAnswers[i-1]+'</span></button>';
             }
             $(answerList).html(answerHTML);
-            initializeButtons();
+            qJSinitializeButtons(this.answerBlock);
             this.questionIndex++;
         }
     }
     //Answer buttons clicked
     makeChoice(element){
+        qJSanimateChangeQuestion(this.element);
         var answered = $(element).children('.answer-text').html();
         if(answered == this.questions[this.questionIndex-1][1]){
             this.userAnswers[this.questionIndex-1] = true;
-            console.log('good');
+            console.log('Good answer');
+            this.points++;
         } else{
             this.userAnswers[this.questionIndex-1] = false;
-            console.log('bad');
+            console.log('Bad answer');
         }
         this.changeQuestion();
     }
@@ -97,11 +105,26 @@ class quizJS {
         console.log("Error on 'questions' -> 2D array expected, got -> ["+questions+"]");
     }
 }
-function initializeButtons(){
+
+function qJSendQuiz(element, element_end, points, max_points){
+    $(element).addClass('d-none');
+    $(element_end).removeClass('d-none');
+    $(element_end).find('#points').html(points);
+    $(element_end).find('#max_points').html(max_points);
+}
+
+function qJSanimateChangeQuestion(element){
+    $(element).addClass('zoomIn');
+    window.tempQuizJS = element;
+    setTimeout("$(window.tempQuizJS).removeClass('zoomIn'); window.temp1 = ''", 500);
+}
+
+function qJSinitializeButtons(element){
     //Reset function
-    $('.answer').unbind();
+    window.a = element;
+    $(element).children('.answer').unbind();
     //Add functions to buttons
-    $('.answer').click(function(){
+    $(element).children('.answer').click(function(){
         quiz.makeChoice(this);
     });
 }

@@ -16,11 +16,19 @@
 <body>
     <main id="app">
         <div class="container d-flex flex-column align-items-center justify-content-center">
+
             <div class="w-100 text-center title-box">
                 <h1>QuizJS by Matthew</h1>
                 <p>QuizJS is simple JS library to create Quizes.</p>
             </div>
+
             <div class="w-100 quiz-box" id="quiz">
+            </div>
+
+            <div class="w-100 quiz-box text-center" id="quiz_end">
+                <h1>Congratulations</h1>
+                <p>You ended a quiz!</p>
+                <p>Good answers <span id="points"></span>/<span id="max_points"></span></p>
             </div>
 
             <script type="text/javascript">
