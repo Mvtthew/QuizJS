@@ -92,15 +92,15 @@ class quizJS {
     //     this.changeQuestion();
     // }
     //Previous question function
-    previousQuestion(){
-        console.log(this.questionIndex);
-        if(this.questionIndex > 1){
-            this.questionIndex -= 2;
-            this.changeQuestion();
-        } else{
-            console.log('First question');
-        }
-    }
+    // previousQuestion(){
+    //     console.log(this.questionIndex);
+    //     if(this.questionIndex > 1){
+    //         this.questionIndex -= 2;
+    //         this.changeQuestion();
+    //     } else{
+    //         console.log('First question');
+    //     }
+    // }
     badQuestionsLog(){
         console.log("Error on 'questions' -> 2D array expected, got -> ["+questions+"]");
     }
