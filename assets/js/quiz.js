@@ -2,6 +2,7 @@ class quizJS {
     constructor(questions, elementID) {
         //Elements
         this.element = $('#'+elementID);
+        this.element_start = $('#'+elementID+"_start");
         this.element_end = $('#'+elementID+"_end");
         $(this.element_end).addClass('d-none');
         $(this.element).html('<div class="question-block"><span class="question-no"></span><span class="question-text"></span></div><div class="answers-block"></div>');
@@ -22,10 +23,21 @@ class quizJS {
         this.firstInitialize();
     }
     firstInitialize(){
+        //Start quiz from index = 0
+        if($(this.element_start).length > 0){
+            qJSinitializeButtons(this.element_start, this);
+        } else{
+            this.startQuiz();
+        }
+    }
+    startQuiz(){
         //Add animate.css important classes
         $(this.element).addClass('animated faster');
-        //Start quiz from index = 0
         this.changeQuestion();
+    }
+    startQuizFromButton(){
+        qJSanimateStart(this.element_start);
+        this.startQuiz();
     }
     //Randomize questions
     randomizeAnswers(){
@@ -80,12 +92,6 @@ class quizJS {
         }
         this.changeQuestion();
     }
-    hideQuiz(){
-        $(this.element).addClass('hide');
-    }
-    showQuiz(){
-        $(this.element).removeClass('hide');
-    }
     //Skip question function
     // skipQuestion(){
     //     console.log(this.questionIndex);
@@ -120,10 +126,19 @@ function qJSanimateChangeQuestion(element){
     setTimeout("$(window.tempQuizJS).removeClass('zoomIn'); window.temp1 = ''", 500);
 }
 
+function qJSanimateStart(element){
+    $(element).addClass("animated zoomOut");
+    window.tempQuizJS = element;
+    setTimeout("$(window.tempQuizJS).removeClass('zoomIn'); window.temp1 = ''", 500);
+}
+
 function qJSinitializeButtons(element, quizClass){
-    $(element).children('.answer').unbind();
+    $(element).find('.answer').unbind();
     //Add functions to buttons
-    $(element).children('.answer').click(function(){
+    $(element).find('#start').click(function(){
+        quizClass.startQuizFromButton();
+    });
+    $(element).find('.answer').click(function(){
         quizClass.makeChoice(this);
     });
 }
