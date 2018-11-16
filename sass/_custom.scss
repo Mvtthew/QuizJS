@@ -12,10 +12,14 @@ main{
     .container{
         min-height: 100vh;
     }
-    //Title box of site
-    .title-box{
-        margin-bottom: 6rem;
-    }
+}
+
+//Title box of site
+.title-box{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
 }
 
 .quiz-box{

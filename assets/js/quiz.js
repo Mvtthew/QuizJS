@@ -25,18 +25,18 @@ class quizJS {
     firstInitialize(){
         //Start quiz from index = 0
         if($(this.element_start).length > 0){
+            //Hide quiz and show a fist page
             qJSinitializeButtons(this.element_start, this);
         } else{
+            //If there is not starting quiz element just show 1st question
             this.startQuiz();
         }
     }
     startQuiz(){
-        //Add animate.css important classes
-        $(this.element).addClass('animated faster');
         this.changeQuestion();
     }
     startQuizFromButton(){
-        qJSanimateStart(this.element_start);
+        qJSanimateOut(this.element_start);
         this.startQuiz();
     }
     //Randomize questions
@@ -55,10 +55,11 @@ class quizJS {
     }
     //Text only functions
     changeQuestion(){
+        qJSanimateIn(this.element);
         //Check if we got more question to ask
         if(this.questionIndex == this.questions.length){
             //End of quiz!
-            qJSendQuiz(this.element, this.element_end, this.points, this.max_points);
+            this.endQuiz();
         } else{
             //Elements
             var questionBlockNumber = $(this.questionBlock).children()[0];
@@ -80,7 +81,6 @@ class quizJS {
     }
     //Answer buttons clicked
     makeChoice(element){
-        qJSanimateChangeQuestion(this.element);
         var answered = $(element).children('.answer-text').html();
         if(answered == this.questions[this.questionIndex-1][1]){
             this.userAnswers[this.questionIndex-1] = true;
@@ -92,44 +92,34 @@ class quizJS {
         }
         this.changeQuestion();
     }
-    //Skip question function
-    // skipQuestion(){
-    //     console.log(this.questionIndex);
-    //     this.changeQuestion();
-    // }
-    //Previous question function
-    // previousQuestion(){
-    //     console.log(this.questionIndex);
-    //     if(this.questionIndex > 1){
-    //         this.questionIndex -= 2;
-    //         this.changeQuestion();
-    //     } else{
-    //         console.log('First question');
-    //     }
-    // }
+    endQuiz(){
+        $(this.element).addClass('d-none');
+        $(this.element_start).addClass('d-none');
+        $(this.element_end).removeClass('d-none');
+        qJSanimateIn(this.element_end);
+        qJSendQuiz(this.element_end, this.points, this.max_points);
+    }
     badQuestionsLog(){
         console.log("Error on 'questions' -> 2D array expected, got -> ["+questions+"]");
     }
 }
 
-function qJSendQuiz(element, element_end, points, max_points){
-    $(element).addClass('d-none');
-    $(element_end).removeClass('d-none');
+function qJSendQuiz(element_end, points, max_points){
     $(element_end).find('#points').html(points);
     $(element_end).find('#max_points').html(max_points);
 }
 
-function qJSanimateChangeQuestion(element){
+function qJSanimateIn(element){
     //Animate.css IN-type animation here:
-    $(element).addClass("zoomIn");
+    $(element).addClass("animated faster zoomIn");
     window.tempQuizJS = element;
-    setTimeout("$(window.tempQuizJS).removeClass('zoomIn'); window.temp1 = ''", 500);
+    setTimeout("$(window.tempQuizJS).removeClass('animated faster zoomIn'); window.temp1 = ''", 500);
 }
 
-function qJSanimateStart(element){
-    $(element).addClass("animated zoomOut");
+function qJSanimateOut(element){
+    $(element).addClass("animated faster zoomOut");
     window.tempQuizJS = element;
-    setTimeout("$(window.tempQuizJS).removeClass('zoomIn'); window.temp1 = ''", 500);
+    setTimeout("$(window.tempQuizJS).removeClass('animated faster zoomIn'); window.temp1 = ''", 500);
 }
 
 function qJSinitializeButtons(element, quizClass){
