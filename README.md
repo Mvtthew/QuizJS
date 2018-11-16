@@ -40,13 +40,13 @@ I tried to made it as simple as possible...
         <div class="quiz-box" id="quiz">
         </div>
 
-        //Ending pane must have id of your quiz + '_start' and must have selector with id = "start"
+        //[NOT-REQUIRED] (if not set up, quiz will start right away) Welcome pane must have id of your quiz + '_start' and must have selector with id = "start"
         <div class="w-100 quiz-box text-center" id="quiz_start">
             <h1>Quiz start</h1>
             <button id="start" class="btn btn-lg btn-primary mt-4">Start quiz</button>
         </div>
 
-        //Ending pane must have id of your quiz + '_end'
+        //[REQUIRED] Ending pane must have id of your quiz + '_end'
         <div class="w-100 quiz-box text-center" id="quiz_end">
             <h1>Congratulations</h1>
             <p>You ended a quiz!</p>
