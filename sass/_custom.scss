@@ -19,7 +19,7 @@ main{
     .quiz-box{
         transition: .4s all;
         *{
-            transition: .4s all;            
+            transition: .4s all;
         }
         &.hide{
             opacity: 0;
@@ -53,7 +53,7 @@ main{
                 transition: .5s all;
                 cursor: pointer;
                 margin: .5rem 0;
-                background: $t-300;
+                background: $btn;
                 font-size: 1.5rem;
                 padding: 0;
                 border: 0;
@@ -61,13 +61,13 @@ main{
                     display: inline-block;
                 }
                 &:hover{
-                    background: $t-400;
+                    background: $btn-hover;
                 }
                 &:active{
-                    box-shadow: 0 0 5px $t-600;
+                    box-shadow: 0 0 5px $btn-active;
                 }
                 &:focus{
-                    box-shadow: 0 0 5px $t-600;
+                    box-shadow: 0 0 5px $btn-active;
                 }
                 //Answer
                 &.answer{
@@ -77,7 +77,7 @@ main{
                         padding: .6rem;
                         width: 40px;
                         text-align: center;
-                        background-color: $t-500;
+                        background-color: $btn-letter;
                     }
                     //Answer text
                     .answer-text{

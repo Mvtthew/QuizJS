@@ -3,7 +3,7 @@
 }
 
 body {
-  background: linear-gradient(#B2DFDB, #E0F2F1);
+  background: linear-gradient(#F5F5F5, #F5F5F5);
 }
 
 .transition-0 {
@@ -48,7 +48,7 @@ main .quiz-box .answers-block button {
   transition: 0.5s all;
   cursor: pointer;
   margin: 0.5rem 0;
-  background: #4DB6AC;
+  background: #EEEEEE;
   font-size: 1.5rem;
   padding: 0;
   border: 0;
@@ -57,20 +57,20 @@ main .quiz-box .answers-block button span {
   display: inline-block;
 }
 main .quiz-box .answers-block button:hover {
-  background: #26A69A;
+  background: #BDBDBD;
 }
 main .quiz-box .answers-block button:active {
-  box-shadow: 0 0 5px #00897B;
+  box-shadow: 0 0 5px #BDBDBD;
 }
 main .quiz-box .answers-block button:focus {
-  box-shadow: 0 0 5px #00897B;
+  box-shadow: 0 0 5px #BDBDBD;
 }
 main .quiz-box .answers-block button.answer .answer-letter {
   font-size: 1.7rem;
   padding: 0.6rem;
   width: 40px;
   text-align: center;
-  background-color: #009688;
+  background-color: #E0E0E0;
 }
 main .quiz-box .answers-block button.answer .answer-text {
   padding: 1rem 0;
