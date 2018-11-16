@@ -15,6 +15,9 @@ Simple JS library to create smaller and bigger quizes on your website!
 - Ending of quiz with points counter!
 
 ## How to initialize and use QuizJS!
+
+I tried to made it as simple as possible!
+
 ```
 <html>
     <head>
@@ -60,3 +63,5 @@ Simple JS library to create smaller and bigger quizes on your website!
     </body>
 </html>
 ```
+
+Covered by MIT license (c) Mateusz Ożóg
