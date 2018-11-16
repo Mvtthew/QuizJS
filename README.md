@@ -64,4 +64,4 @@ I tried to made it as simple as possible!
 </html>
 ```
 
-Covered by MIT license (c) Mateusz Ożóg
+*Covered by MIT license (c) Mateusz Ożóg*
