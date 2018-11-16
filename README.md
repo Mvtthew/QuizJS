@@ -1,4 +1,4 @@
-# QuizJS v0.12c *(Not fully functional YET!)*
+# QuizJS v0.2 *(Not fully functional YET!)*
 > Made by Mateusz Ożóg
 
 Simple JS library to create smaller and bigger quizes on your website!
@@ -6,11 +6,13 @@ Simple JS library to create smaller and bigger quizes on your website!
 ## Requirements for QuizJS
 - JQuery 3+
 - Bootstrap Bundle 4+
+- Animate.css
 
 ## What's working right now?
 - Initializing a new quiz
 - Adding up to 10 answers for one question
 - Randomizing order of answers every question
+- Ending of quiz with points counter!
 
 ## How to initialize and use QuizJS!
 ```
@@ -27,13 +29,21 @@ Simple JS library to create smaller and bigger quizes on your website!
     </head>
 
     <body>
-    
+
+        //Must have class 'quiz-box'
         <div class="quiz-box" id="quiz">
+        </div>
+
+        //Ending pane must have id of your quiz + '_end'
+        <div class="w-100 quiz-box text-center" id="quiz_end">
+            <h1>Congratulations</h1>
+            <p>You ended a quiz!</p>
+            <p>Good answers <span id="points"></span>/<span id="max_points"></span></p>
         </div>
 
         <script>
 
-            //We need to made some questions and answers for our Quiz
+            //First we need to made some questions and answers for our Quiz
             var questions = [
                 ['Question1', 'Good answer', 'Bad answer', 'Bad answer'],
                 ['Question2', 'Good answer', 'Bad answer', 'Bad answer'],
