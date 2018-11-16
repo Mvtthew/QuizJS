@@ -2,6 +2,7 @@ class quizJS {
     constructor(questions, elementID) {
         //Elements
         this.element = $('#'+elementID);
+        $(this.element).addClass('d-none');
         this.element_start = $('#'+elementID+"_start");
         this.element_end = $('#'+elementID+"_end");
         $(this.element_end).addClass('d-none');
@@ -33,6 +34,7 @@ class quizJS {
         }
     }
     startQuiz(){
+        $(this.element).removeClass('d-none');
         this.changeQuestion();
     }
     startQuizFromButton(){
