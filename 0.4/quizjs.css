@@ -1,3 +1,32 @@
+* {
+  color: #212121 !important;
+}
+
+body {
+  background: linear-gradient(#F5F5F5, #F5F5F5);
+}
+
+.transition-0 {
+  transition: 0s all !important;
+}
+
+main .container {
+  min-height: 100vh;
+}
+
+.title-box {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+}
+.title-box h1 {
+  font-size: 1.5rem;
+}
+.title-box p {
+  font-size: 1rem;
+}
+
 .quiz-box {
   transition: 0.4s all;
 }
@@ -6,6 +35,9 @@
 }
 .quiz-box.hide {
   opacity: 0;
+}
+.quiz-box.h-0 {
+  height: 0 !important;
 }
 .quiz-box .question-block {
   display: flex !important;

@@ -36,6 +36,9 @@ main{
     &.hide{
         opacity: 0;
     }
+    &.h-0{
+        height: 0 !important;
+    }
     //Question block
     .question-block{
         display: flex !important;

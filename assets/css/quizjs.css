@@ -36,6 +36,9 @@ main .container {
 .quiz-box.hide {
   opacity: 0;
 }
+.quiz-box.h-0 {
+  height: 0 !important;
+}
 .quiz-box .question-block {
   display: flex !important;
   align-items: center;

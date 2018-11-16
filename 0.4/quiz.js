@@ -118,8 +118,7 @@ function qJSanimateIn(element){
 
 function qJSanimateOut(element){
     $(element).addClass("animated faster zoomOut");
-    window.tempQuizJS = element;
-    setTimeout("$(window.tempQuizJS).removeClass('animated faster zoomIn'); window.temp1 = ''", 500);
+    $(element).addClass("h-0");
 }
 
 function qJSinitializeButtons(element, quizClass){
