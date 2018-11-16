@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>QuizJS | Matthew</title>
+    <link rel="icon" href="assets/favicon.png">
+    <meta name="viewport" content="initial-scale=1">
     <!-- Bootstrap / Animate.css / Custom styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
@@ -31,6 +33,15 @@
                 <p>Good answers <span id="points"></span>/<span id="max_points"></span></p>
             </div>
 
+            <div class="w-100 quiz-box" id="quiz2">
+            </div>
+
+            <div class="w-100 quiz-box text-center" id="quiz2_end">
+                <h1>Congratulations</h1>
+                <p>You ended a quiz!</p>
+                <p>Good answers <span id="points"></span>/<span id="max_points"></span></p>
+            </div>
+
             <script type="text/javascript">
 
                 var questions = [
@@ -42,7 +53,8 @@
                     ['Question6', 'Answerto6q_valid_A', 'Answerto6q_B', 'Answerto6q_C']
                 ];
                 var quiz = new quizJS(questions, "quiz");
-                
+                var quiz2 = new quizJS(questions, "quiz2");
+
             </script>
 
         </div>

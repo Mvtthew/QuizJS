@@ -1,4 +1,4 @@
-# QuizJS v0.2 *(Not fully functional YET!)*
+# QuizJS v0.3
 > Made by Mateusz Ożóg
 
 Simple JS library to create smaller and bigger quizes on your website!
@@ -13,6 +13,7 @@ Simple JS library to create smaller and bigger quizes on your website!
 - Adding up to 10 answers for one question
 - Randomizing order of answers every question
 - Ending of quiz with points counter!
+- Creating multiple quizes on one page!
 
 ## How to initialize and use QuizJS!
 
@@ -34,7 +35,7 @@ I tried to made it as simple as possible!
 
     <body>
 
-        //Must have class 'quiz-box'
+        //Selector must have class 'quiz-box'
         <div class="quiz-box" id="quiz">
         </div>
 
@@ -55,7 +56,7 @@ I tried to made it as simple as possible!
             ];
 
             // If we got questions just create new quiz in JS
-            // var quiz = new quizJS(2D array, ID of element in html)
+            // var quiz = new quizJS(2D array, ID of selector)
             var quiz = new quizJS(questions, "quiz");
 
         </script>
