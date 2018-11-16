@@ -10,7 +10,7 @@ class quizJS {
         //Vars
         this.questions = questions;
         this.questionIndex = 0;
-        this.answerLetters = ['', 'A', 'B', 'C', 'D', 'E', 'F', 'G'];
+        this.answerLetters = ['', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
         this.userAnswers = [];
         this.points = 0;
         this.max_points = this.questions.length;
@@ -114,9 +114,11 @@ function qJSendQuiz(element, element_end, points, max_points){
 }
 
 function qJSanimateChangeQuestion(element){
-    $(element).addClass('zoomIn');
+    //Animate.css IN-type animation here:
+    var animation = "zoomIn";
+    $(element).addClass(animation);
     window.tempQuizJS = element;
-    setTimeout("$(window.tempQuizJS).removeClass('zoomIn'); window.temp1 = ''", 500);
+    setTimeout("$(window.tempQuizJS).removeClass("+animation+"); window.temp1 = ''", 500);
 }
 
 function qJSinitializeButtons(element){
