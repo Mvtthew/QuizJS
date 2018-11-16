@@ -1,0 +1,64 @@
+.quiz-box {
+  transition: 0.4s all;
+}
+.quiz-box * {
+  transition: 0.4s all;
+}
+.quiz-box.hide {
+  opacity: 0;
+}
+.quiz-box .question-block {
+  display: flex !important;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.quiz-box .question-block span {
+  display: block;
+}
+.quiz-box .question-block .question-no {
+  padding-right: 1.5rem;
+  font-size: 4rem;
+}
+.quiz-box .question-block .question-text {
+  font-size: 1.4rem;
+  text-align: justify;
+}
+.quiz-box .answers-block button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  transition: 0.5s all;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  background: #EEEEEE;
+  font-size: 1.5rem;
+  padding: 0;
+  border: 0;
+}
+.quiz-box .answers-block button span {
+  display: inline-block;
+}
+.quiz-box .answers-block button:hover {
+  background: #BDBDBD;
+}
+.quiz-box .answers-block button:active {
+  box-shadow: 0 0 5px #BDBDBD;
+}
+.quiz-box .answers-block button:focus {
+  box-shadow: 0 0 5px #BDBDBD;
+}
+.quiz-box .answers-block button.answer .answer-letter {
+  font-size: 1.7rem;
+  padding: 0.6rem;
+  width: 40px;
+  text-align: center;
+  background-color: #E0E0E0;
+}
+.quiz-box .answers-block button.answer .answer-text {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  padding: 0.6rem;
+  width: 40px;
+}
+
+/*# sourceMappingURL=quizjs.css.map */
