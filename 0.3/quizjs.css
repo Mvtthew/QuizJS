@@ -1,47 +1,29 @@
-* {
-  color: #212121 !important;
-}
-
-body {
-  background: linear-gradient(#F5F5F5, #F5F5F5);
-}
-
-.transition-0 {
-  transition: 0s all !important;
-}
-
-main .container {
-  min-height: 100vh;
-}
-main .title-box {
-  margin-bottom: 6rem;
-}
-main .quiz-box {
+.quiz-box {
   transition: 0.4s all;
 }
-main .quiz-box * {
+.quiz-box * {
   transition: 0.4s all;
 }
-main .quiz-box.hide {
+.quiz-box.hide {
   opacity: 0;
 }
-main .quiz-box .question-block {
+.quiz-box .question-block {
   display: flex !important;
   align-items: center;
   margin-bottom: 2rem;
 }
-main .quiz-box .question-block span {
+.quiz-box .question-block span {
   display: block;
 }
-main .quiz-box .question-block .question-no {
+.quiz-box .question-block .question-no {
   padding-right: 1.5rem;
   font-size: 4rem;
 }
-main .quiz-box .question-block .question-text {
+.quiz-box .question-block .question-text {
   font-size: 1.4rem;
   text-align: justify;
 }
-main .quiz-box .answers-block button {
+.quiz-box .answers-block button {
   display: block;
   width: 100%;
   text-align: left;
@@ -53,26 +35,26 @@ main .quiz-box .answers-block button {
   padding: 0;
   border: 0;
 }
-main .quiz-box .answers-block button span {
+.quiz-box .answers-block button span {
   display: inline-block;
 }
-main .quiz-box .answers-block button:hover {
+.quiz-box .answers-block button:hover {
   background: #BDBDBD;
 }
-main .quiz-box .answers-block button:active {
+.quiz-box .answers-block button:active {
   box-shadow: 0 0 5px #BDBDBD;
 }
-main .quiz-box .answers-block button:focus {
+.quiz-box .answers-block button:focus {
   box-shadow: 0 0 5px #BDBDBD;
 }
-main .quiz-box .answers-block button.answer .answer-letter {
+.quiz-box .answers-block button.answer .answer-letter {
   font-size: 1.7rem;
   padding: 0.6rem;
   width: 40px;
   text-align: center;
   background-color: #E0E0E0;
 }
-main .quiz-box .answers-block button.answer .answer-text {
+.quiz-box .answers-block button.answer .answer-text {
   padding: 1rem 0;
   font-size: 1.4rem;
   padding: 0.6rem;

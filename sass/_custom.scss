@@ -16,76 +16,77 @@ main{
     .title-box{
         margin-bottom: 6rem;
     }
-    .quiz-box{
-        transition: .4s all;
-        *{
-            transition: .4s all;
-        }
-        &.hide{
-            opacity: 0;
-        }
-        //Question block
-        .question-block{
-            display: flex !important;
-            align-items: center;
-            margin-bottom: 2rem;
-            span{
-                display: block;
-            }
-            //1,2,3,4 etc.
-            .question-no{
-                padding-right: 1.5rem;
-                font-size: 4rem;
-            }
-            //Text of question
-            .question-text{
-                font-size: 1.4rem;
-                text-align: justify;
-            }
-        }
+}
 
-        //Answers styles
-        .answers-block{
-            button{
-                display: block;
-                width: 100%;
-                text-align: left;
-                transition: .5s all;
-                cursor: pointer;
-                margin: .5rem 0;
-                background: $btn;
-                font-size: 1.5rem;
-                padding: 0;
-                border: 0;
-                span{
-                    display: inline-block;
+.quiz-box{
+    transition: .4s all;
+    *{
+        transition: .4s all;
+    }
+    &.hide{
+        opacity: 0;
+    }
+    //Question block
+    .question-block{
+        display: flex !important;
+        align-items: center;
+        margin-bottom: 2rem;
+        span{
+            display: block;
+        }
+        //1,2,3,4 etc.
+        .question-no{
+            padding-right: 1.5rem;
+            font-size: 4rem;
+        }
+        //Text of question
+        .question-text{
+            font-size: 1.4rem;
+            text-align: justify;
+        }
+    }
+
+    //Answers styles
+    .answers-block{
+        button{
+            display: block;
+            width: 100%;
+            text-align: left;
+            transition: .5s all;
+            cursor: pointer;
+            margin: .5rem 0;
+            background: $btn;
+            font-size: 1.5rem;
+            padding: 0;
+            border: 0;
+            span{
+                display: inline-block;
+            }
+            &:hover{
+                background: $btn-hover;
+            }
+            &:active{
+                box-shadow: 0 0 5px $btn-active;
+            }
+            &:focus{
+                box-shadow: 0 0 5px $btn-active;
+            }
+            //Answer
+            &.answer{
+                //A, B, C... etc
+                .answer-letter{
+                    font-size: 1.7rem;
+                    padding: .6rem;
+                    width: 40px;
+                    text-align: center;
+                    background-color: $btn-letter;
                 }
-                &:hover{
-                    background: $btn-hover;
-                }
-                &:active{
-                    box-shadow: 0 0 5px $btn-active;
-                }
-                &:focus{
-                    box-shadow: 0 0 5px $btn-active;
-                }
-                //Answer
-                &.answer{
-                    //A, B, C... etc
-                    .answer-letter{
-                        font-size: 1.7rem;
-                        padding: .6rem;
-                        width: 40px;
-                        text-align: center;
-                        background-color: $btn-letter;
-                    }
-                    //Answer text
-                    .answer-text{
-                        padding: 1rem 0;
-                        font-size: 1.4rem;
-                        padding: .6rem;
-                        width: 40px;
-                    }
+                //Answer text
+                .answer-text{
+                    padding: 1rem 0;
+                    font-size: 1.4rem;
+                    padding: .6rem;
+                    width: 40px;
                 }
             }
         }
