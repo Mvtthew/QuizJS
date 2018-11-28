@@ -3,6 +3,9 @@
 
 Simple JS library to create smaller and bigger quizes on your website!
 
+![Preview Main](https://raw.githubusercontent.com/Azurixa/QuizJS/master/preview2.png)
+![Preview Question](https://raw.githubusercontent.com/Azurixa/QuizJS/master/preview.png)
+
 ## Requirements for QuizJS
 - JQuery 3+
 - Bootstrap Bundle 4+
