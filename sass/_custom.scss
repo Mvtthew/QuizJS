@@ -40,6 +40,17 @@ main{
     &.h-0{
         height: 0 !important;
     }
+    .index-block{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+        .index{
+            
+            &.checked{
+
+            }
+        }
+    }
     //Question block
     .question-block{
         display: flex !important;

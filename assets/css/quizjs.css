@@ -40,6 +40,11 @@ main .container {
 .quiz-box.h-0 {
   height: 0 !important;
 }
+.quiz-box .index-block {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
 .quiz-box .question-block {
   display: flex !important;
   align-items: center;

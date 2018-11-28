@@ -6,8 +6,9 @@ class quizJS {
         this.element_start = $('#'+elementID+"_start");
         this.element_end = $('#'+elementID+"_end");
         $(this.element_end).addClass('d-none');
-        $(this.element).html('<div class="question-block"><span class="question-no"></span><span class="question-text"></span></div><div class="answers-block"></div>');
+        $(this.element).html('<div class="question-block"><span class="question-no"></span><span class="question-text"></span></div><div class="index-block"></div><div class="answers-block"></div>');
         this.questionBlock = this.element.children('.question-block');
+        this.indexBlock = this.element.children('.index-block');
         this.answerBlock = this.element.children('.answers-block');
         //Vars
         this.questions = questions;
@@ -54,6 +55,10 @@ class quizJS {
             randomizedAnswers[i] = this.questions[this.questionIndex][randomizedIndexes[i]];
         }
         return randomizedAnswers;
+    }
+    //Make indexes
+    initIndexes(){
+
     }
     //Text only functions
     changeQuestion(){
